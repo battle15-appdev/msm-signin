@@ -12,4 +12,6 @@
 #
 class Director < ApplicationRecord
   has_many :filography, :class_name => "Movie"
+
+  validates(:name, {:presence => true })
 end

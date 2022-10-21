@@ -13,4 +13,6 @@
 class Actor < ApplicationRecord
   has_many :characters
   has_many :filography, :through => :characters, :source => :movie
+
+  validates(:name, {:presence => true })
 end
